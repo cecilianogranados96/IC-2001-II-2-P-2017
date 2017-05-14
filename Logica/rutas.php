@@ -12,7 +12,7 @@ $r1 = explode(",", $lines[$p[0]+1]);
 $r2 = explode(",", $lines[$p[1]+1]);
 $data .= '
 	{
-      "id": "line1",
+      "id": "line",
       "arc": -0.85,
       "alpha": 2.0,
 	  "svgPath": icon,

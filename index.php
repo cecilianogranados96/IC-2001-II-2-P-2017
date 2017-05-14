@@ -46,7 +46,7 @@
 		</div>
 		<!-- Demo links -->
 		<nav class="meta">
-			<a class="demo-link" href="part1.html">Ayuda</a>
+			<a class="demo-link" href="Manual" target="_Blanck">Ayuda</a>
 		</nav>
 		<div class="partisan">
 			<svg class="partisan__bg" viewBox="0 0 500 188" preserveAspectRatio="none" width="100%" height="100%" aria-hidden="true">
