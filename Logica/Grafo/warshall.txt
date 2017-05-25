@@ -1,0 +1,5 @@
+Cerradura transitiva por algoritmo de Warshall
+﻿Aeropuerto:	1	1	1	1	
+Aeropuerto:	1	1	1	1	
+Aeropuerto:	1	1	1	1	
+Aeropuerto:	0	0	0	0	
