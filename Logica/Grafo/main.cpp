@@ -37,17 +37,18 @@ void readVertex(Graph* matriz)
     //Lee los aeropuertos y crea cada nodo
     while (getline(file, textline))
     {
-       string comma_string;
-       std::istringstream text_stream(textline);
-       text_stream >> nombre;
-       getline(text_stream, comma_string, ','); // Read characters after number until comma.
-       text_stream >> posX;
-       getline(text_stream, comma_string, ','); // Read characters after number until comma.
-       text_stream >> posY;
-       getline(text_stream, comma_string, ',');
-       getline(text_stream, imagen, '\n');
+        string comma_string;
+        std::istringstream text_stream(textline);
+        text_stream >> nombre;
+        getline(text_stream, comma_string, ','); // Read characters after number until comma.
+        text_stream >> posX;
+        getline(text_stream, comma_string, ','); // Read characters after number until comma.
+        text_stream >> posY;
+        getline(text_stream, comma_string, ',');
+        getline(text_stream, imagen, '\n');
 
-       matriz->addVertex(new Aeropuerto(nombre, posX, posY, imagen));
+        matriz->addVertex(new Aeropuerto(nombre, posX, posY, imagen));
+
     }
 
     file.close();
@@ -57,9 +58,9 @@ void readEdge(Graph* matriz)
 {
     int origen, destino, peso;
     std::string textline;
-    ifstream file ("rutas.txt");
+    ifstream fileR ("rutas.txt");
 
-    while (getline(file, textline))
+    while (getline(fileR, textline))
     {
        string comma_string;
        std::istringstream text_stream(textline);
@@ -72,55 +73,113 @@ void readEdge(Graph* matriz)
        matriz->addEdge(origen, destino, peso);
     }
 
-    file.close();
+    fileR.close();
 
 }
 int numberLines()
 {
     int lines = 0;
     std::string line;
-    ifstream file ("aeropuertos.txt");
+    ifstream fileA ("aeropuertos.txt");
 
-    while(getline(file, line))
+    while(getline(fileA, line))
         ++lines;
-    file.close();
+    //file.close();
 }
 
 int main(void)
 {
     cout<<"\t\t\t Aeropuertos \n"<<endl;
-    Graph* matriz = new Graph(numberLines());
-    readVertex(matriz);
-    readEdge(matriz);
+    int lines = 0;
+    std::string line;
+    ifstream fileA ("aeropuertos.txt");
+
+    while(getline(fileA, line))
+        ++lines;
+    fileA.close();
+
+    Graph* matriz = new Graph(lines);//numberLines());
+
+    //cout<<numberLines();
+    //readVertex(matriz);
+    //readEdge(matriz);
+
+    float posX,posY;
+    string nombre, imagen;
+    std::string textline;
+    ifstream file ("aeropuertos.txt");
+
+    //Lee los aeropuertos y crea cada nodo
+    while (getline(file, textline))
+    {
+        string comma_string;
+        std::istringstream text_stream(textline);
+        text_stream >> nombre;
+        getline(text_stream, comma_string, ','); // Read characters after number until comma.
+        text_stream >> posX;
+        getline(text_stream, comma_string, ','); // Read characters after number until comma.
+        text_stream >> posY;
+        getline(text_stream, comma_string, ',');
+        getline(text_stream, imagen, '\n');
+
+        matriz->addVertex(new Aeropuerto(nombre, posX, posY, imagen));
+
+    }
+
+    file.close();
+
+    int origen, destino, peso;
+    std::string textlineR;
+    ifstream fileR ("rutas.txt");
+
+    while (getline(fileR, textlineR))
+    {
+       string comma_string;
+       std::istringstream text_stream(textlineR);
+       text_stream >> origen;
+       getline(text_stream, comma_string, ',');
+       text_stream >> destino;
+       getline(text_stream, comma_string, ',');
+       text_stream >> peso;
+
+       matriz->addEdge(origen, destino, peso);
+    }
+
+    fileR.close();
 
     TodoCaminoMinimo* floyd = new TodoCaminoMinimo(matriz);
     CaminoMinimo* dijkstra = new CaminoMinimo(matriz);
 
-    WSockServer MyServer(REQ_WINSOCK_VER);
-    MyServer.RunServer(1500,"INICIAL");
+    //WSockServer MyServer(REQ_WINSOCK_VER);
+    //MyServer.RunServer(1500,"INICIAL");
 
+    matriz->print(matriz->getGraph());
     int opcion = 0;
     while(true)
     {
-        WSockServer MyServer(REQ_WINSOCK_VER);
+        //WSockServer MyServer(REQ_WINSOCK_VER);
         cout<<"\t\t\tAeropuertos\n\nMenu\n\n0. Elegir ruta mas corta\n1. Crear archivos con Warshall(n)\n2. Crear archivos con Kruskal\n\nDigite su eleccion: ";
-        //cin>>opcion;
-        opcion = toint(MyServer.RunServer(1500,"Opcion OK"));
+        cin>>opcion;
+
+        //opcion = toint(MyServer.RunServer(1500,"Opcion OK"));
 
         if(opcion == 0){
             int algoritmo;
             int origen;
             int destino;
 
-            WSockServer MyServer(REQ_WINSOCK_VER);
+            //WSockServer MyServer(REQ_WINSOCK_VER);
             cout<<"Digite el algoritmo [1.Dijkstra - 2.Floyd]: ";
-            algoritmo = toint(MyServer.RunServer(1500,"Opcion OK"));
+            //algoritmo = toint(MyServer.RunServer(1500,"Opcion OK"));
+            cin>>algoritmo;
 
             cout<<"Digite el aeropuerto de origen: ";
-            origen = toint(MyServer.RunServer(1500,"Opcion OK"));
+            //origen = toint(MyServer.RunServer(1500,"Opcion OK"));
+            cin>>origen;
 
             cout<<"Digite el aeropuerto de destino: ";
-            destino = toint(MyServer.RunServer(1500,"Opcion OK"));
+            //destino = toint(MyServer.RunServer(1500,"Opcion OK"));
+            cin>>destino;
 
             if(algoritmo == 1){
                 dijkstra->Dijkstra(matriz, origen);
