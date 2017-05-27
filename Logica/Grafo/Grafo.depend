@@ -275,11 +275,9 @@
 	"Graph.h"
 	<iostream>
 
-<<<<<<< HEAD
-1495763226 source:c:\xampp\htdocs\ic-2001-ii-2-p-2017\logica\grafo\main.cpp
-=======
-1495762499 source:c:\xampp\htdocs\ic-2001-ii-2-p-2017\logica\grafo\main.cpp
->>>>>>> origin/master
+1495762074 D
+
+1495902243 source:c:\xampp\htdocs\ic-2001-ii-2-p-2017\logica\grafo\main.cpp
 	<iostream>
 	<stdlib.h>
 	"CaminoMinimo.h"
@@ -292,20 +290,30 @@
 	<sstream>
 	<cstdlib>
 
-<<<<<<< HEAD
-1495754748 c:\xampp\htdocs\ic-2001-ii-2-p-2017\logica\grafo\include\server.h
-=======
-1495762074 c:\xampp\htdocs\ic-2001-ii-2-p-2017\logica\grafo\include\server.h
->>>>>>> origin/master
+1495762074 gin/master
+	<iostream>
+	<stdlib.h>
+	"CaminoMinimo.h"
+	"TodoCaminoMinimo.h"
+	"Graph.h"
+	"Server.h"
+	<fstream>
+	<string>
+	<cstring>
+	<sstream>
+	<cstdlib>
+	<windows.h>
+	<winsock2.h>
+	<iostream>
+	"Server.h"
+	<iostream>
+
+1495900410 c:\xampp\htdocs\ic-2001-ii-2-p-2017\logica\grafo\include\server.h
 	<windows.h>
 	<winsock2.h>
 	<iostream>
 
-<<<<<<< HEAD
-1495754748 source:c:\xampp\htdocs\ic-2001-ii-2-p-2017\logica\grafo\src\server.cpp
-=======
-1495762074 source:c:\xampp\htdocs\ic-2001-ii-2-p-2017\logica\grafo\src\server.cpp
->>>>>>> origin/master
+1495899953 source:c:\xampp\htdocs\ic-2001-ii-2-p-2017\logica\grafo\src\server.cpp
 	"Server.h"
 	<iostream>
 

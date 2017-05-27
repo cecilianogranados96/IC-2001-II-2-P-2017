@@ -8,11 +8,11 @@ using namespace std;
 class WSockServer
 {
 public:
-	WSockServer(int REQ_WINSOCK_VER);
+	WSockServer();
 	~WSockServer();
-	string RunServer(int PortNumber,string text);
+	string RunServer(string text);
 	void send2(string thestring);
-	void SetServerSockAddr(sockaddr_in *sockAddr, int PortNumber);
+	void SetServerSockAddr(sockaddr_in *sockAddr);
 private:
     char Buffer[128];
 	WSADATA wsaData;

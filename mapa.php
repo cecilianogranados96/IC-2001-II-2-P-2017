@@ -30,7 +30,7 @@
 	        "zoomLevel": 1.5,
 	        "zoomLongitude": 5,
 	        "zoomLatitude": 40,
-	        "lines": [<?php include "Logica/rutas.php"; ?>],
+	        "lines": [<?php include "Logica/rutas_cal.php"; ?>],
 	        "images": [<?php include "Logica/aeropuertos.php"; ?>]
 	    },
 	    "areasSettings": {
