@@ -1,7 +1,7 @@
 <?php
-$myFile = "Datos/aeropuertos.txt";
+$myFile = "Logica/Grafo/aeropuertos.txt";
 $lines = file($myFile);
-$file = fopen("Datos/rutas_cal.txt","r");
+$file = fopen("Logica/Grafo/rutas_cal.txt","r");
 $lat = "";
 $lon = "";
 while(!feof($file))

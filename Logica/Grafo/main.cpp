@@ -154,11 +154,16 @@ int main(void)
                 dijkstra->Dijkstra(matriz, origen);
                 dijkstra->recuperaCaminoAux(destino);
                 cout<<"\nDistancia minima "<<dijkstra->OdistanciaMinima()[destino];
+                WSockServer MyServer5 = WSockServer();
+                MyServer5.RunServer(tostring(dijkstra->OdistanciaMinima()[destino]));
+
             }else
             {
                 floyd->Floyd();
                 floyd->recuperaCamino(origen, destino);
                 cout<<"\nDistancia minima "<<floyd->Odistancia()[origen][destino];
+                WSockServer MyServer3 = WSockServer();
+                MyServer3.RunServer(tostring(floyd->Odistancia()[origen][destino]));
             }
         }
         if(opcion == 1){

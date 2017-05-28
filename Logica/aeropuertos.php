@@ -1,5 +1,5 @@
 <?php
-$file = fopen("Datos/aeropuertos.txt","r");
+$file = fopen("Logica/Grafo/aeropuertos.txt","r");
 $data = "";
 $x = 1;
 while(!feof($file))
