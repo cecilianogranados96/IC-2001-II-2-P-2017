@@ -31,12 +31,6 @@
 			"click": function() {
 				alert("Clicked my custom item. Wow cool!");
 			}
-		},
-		{
-			"label": "Descargar Warshall",
-			"click": function() {
-				alert("Clicked my custom item. Wow cool!");
-			}
 		}
 	);
 	var map = AmCharts.makeChart("chartdiv", {
@@ -83,6 +77,11 @@
 								window.open('Logica/Grafo/kruskal.txt', '_blank');
 						})
 	                }
+	            },{
+	                "label": "Manual de Usuario",
+	                "click": function() {
+						window.open('Manual/', '_blank');	
+	                }
 	            }
 				]
 	        }]
@@ -111,9 +110,9 @@
 			if (map.dataProvider.lines.length == 1){
 				$(".con_escala").text("----");
 				$(".b_con_escala").fadeOut("slow");
-				$(".sin_escala").text("<?php echo $peso;?>");	
+				$(".sin_escala").text(" ‎₡ <?php echo $peso;?>");	
 			}else{
-				$(".con_escala").text("<?php echo $peso;?>");
+				$(".con_escala").text(" ‎₡ <?php echo $peso;?>");
 				$(".sin_escala").text("----");
 				$(".b_sin_escala").fadeOut("slow");
 			}
@@ -129,7 +128,7 @@
 				<center>
 					<h2>
 						Sin escalas:<br>
-						<b class="sin_escala" >5000</b><br>
+						<b class="sin_escala" > ‎₡ 5000</b><br>
 						<a href="#" onclick="alert('COMPRADO');" class="btn btn-warning b_sin_escala" >Comprar</a>
 					</h2>
 				</center>
@@ -173,7 +172,7 @@
 				<center>
 					<h2> 
 						Con escalas:<br>
-						<b class="con_escala">5000</b><br>
+						<b class="con_escala"> ‎₡ 5000</b><br>
 						<a href="#" onclick="alert('COMPRADO');" class="btn btn-warning b_con_escala">Comprar</a>
 					</h2>
 				</center>
