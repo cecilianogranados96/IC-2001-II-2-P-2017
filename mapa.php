@@ -67,14 +67,14 @@
 	                "label": "Descargar Warshall",
 	                "click": function() {
 						$.post('Logica/descargar.php',{opt: 1},function(data) {
-								window.open('Logica/Grafo/warshall.txt', '_blank');
+								window.open('des.php?file=Logica/Grafo/warshall.txt', '_blank');
 						})
 	                }
 	            },{
 	                "label": "Descargar Kruskal",
 	                "click": function() {
 						$.post('Logica/descargar.php',{opt: 2},function(data) {
-								window.open('Logica/Grafo/kruskal.txt', '_blank');
+								window.open('des.php?file=Logica/Grafo/kruskal.txt', '_blank');
 						})
 	                }
 	            },{

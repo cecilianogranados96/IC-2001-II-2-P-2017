@@ -1,7 +1,7 @@
 #include "ArrayList.h"
 #include <iostream>
 #include <stdexcept>
-#define DEFAULT_MAX_SIZE 1024
+#define DEFAULT_MAX_SIZE 100000
 
 using namespace std;
 

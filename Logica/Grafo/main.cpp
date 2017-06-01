@@ -10,6 +10,8 @@
 #include <sstream>
 #define REQ_WINSOCK_VER 2
 #include <cstdlib>
+#include <stdio.h>
+#include <string.h>
 
 using namespace std;
 
@@ -90,9 +92,11 @@ int main(void)
     string nombre, imagen;
     std::string textline;
     ifstream file ("aeropuertos.txt");
+
     while (getline(file, textline))
     {
         string comma_string;
+        //cout<<textline;
         std::istringstream text_stream(textline);
         text_stream >> nombre;
         getline(text_stream, comma_string, ',');
@@ -107,7 +111,6 @@ int main(void)
     int origen, destino, peso;
     std::string textlineR;
     ifstream fileR ("rutas.txt");
-
     while (getline(fileR, textlineR))
     {
        string comma_string;
@@ -122,7 +125,6 @@ int main(void)
     fileR.close();
     TodoCaminoMinimo* floyd = new TodoCaminoMinimo(matriz);
     CaminoMinimo* dijkstra = new CaminoMinimo(matriz);
-    matriz->print(matriz->getGraph());
     int opcion = 0;
     while(true)
     {
@@ -172,7 +174,6 @@ int main(void)
         }
         if(opcion == 2){
             matriz->warshall();
-            matriz->printB(matriz->getWarshall());
         }
     }
     return 0;

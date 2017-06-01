@@ -92,23 +92,20 @@ void Graph::printB(LinkedList* grafo)
     for(int i = 0; i < grafo->getSize(); i++){
         grafo->goToPos(i);
         myfile <<grafo->getCurrValue()->getNombre()<<":\t";
-        cout<<"Vertice: "<<grafo->getCurrValue()->getNombre()<<"\t|||\t Adyacentes: \t";
         if(grafo->getCurr()->getListaAdB()->getSize()){
             for(int j = 0; j < grafo->getCurr()->getListaAdB()->getMax(); j++){
                 grafo->getCurr()->getListaAdB()->goToPos(j);
-                cout<<grafo->getCurr()->getListaAdB()->getValue()<<"\t";
+
                 myfile <<grafo->getCurr()->getListaAdB()->getValue()<<"\t";
             }
         }
         myfile <<"\n";
-        cout<<"\n";
     }
     myfile.close();
 }
 //Implementa el algoritmo de Warshall
 void Graph::warshall()
 {
-    cout<<"\n\nHERE\n\n";
     mWarshall = new LinkedList(maxSize);
     LinkedList* aux = new LinkedList(maxSize);;
     for(int i = 0; i < maxSize; i++){

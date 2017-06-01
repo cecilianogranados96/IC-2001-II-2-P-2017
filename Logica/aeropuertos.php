@@ -10,7 +10,7 @@ while(!feof($file))
 	$data .= '{
 		  "svgPath": targetSVG,
 		  "id": '.$x.',
-		  "title": "'.$p[0].'",
+		  "title": "Aeropuerto Internacional '.$p[0].'",
 		  "latitude":  '.$p[1].',
 		  "longitude": '.$p[2].',
 		  "description": "'.$s.'",

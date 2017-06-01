@@ -53,10 +53,6 @@ void TodoCaminoMinimo::Floyd()
         }
 
     }
-    cout<<"PRINT TRAZA\n";
-    print();
-    cout<<"PRINT D\n";
-    printD();
 }
 
 void TodoCaminoMinimo::recuperaCamino(int i, int j)

@@ -7,9 +7,11 @@ $lon = "";
 while(!feof($file))
 {
 	$dato = fgets($file);
+	if ($dato != ""){
 	$r1 = explode(",", $lines[intval($dato)]);
-	$lat .= $r1[1].',';
-	$lon .= $r1[2].',';
+		$lat .= $r1[1].',';
+		$lon .= $r1[2].',';
+	}
 }
 $lat = substr($lat, 0, -1);
 $lon = substr($lon, 0, -1);

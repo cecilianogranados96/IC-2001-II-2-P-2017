@@ -34,7 +34,6 @@ void CaminoMinimo::Dijkstra(Graph* g, int origen)
                 {
                     D[w] = D[v] + g->getPeso(v, w);
                     ultimo[w] = v;
-
                 }
             }
         }
@@ -51,7 +50,6 @@ int CaminoMinimo::minimo(bool F[])
         {
             mx = D[j];
             v = j;
-
         }
     }
     return v;
