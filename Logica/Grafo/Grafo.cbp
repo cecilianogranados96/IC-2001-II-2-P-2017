@@ -38,26 +38,26 @@
 			<Add option="-fexceptions" />
 		</Compiler>
 		<Unit filename="include/Aeropuerto.h" />
+		<Unit filename="include/AlgorithmDijkstra.h" />
+		<Unit filename="include/AlgorithmFloyd.h" />
 		<Unit filename="include/ArrayList.h" />
-		<Unit filename="include/CaminoMinimo.h" />
 		<Unit filename="include/Graph.h" />
 		<Unit filename="include/LinkedList.h" />
 		<Unit filename="include/LinkedListB.h" />
 		<Unit filename="include/Node.h" />
 		<Unit filename="include/NodeB.h" />
 		<Unit filename="include/Server.h" />
-		<Unit filename="include/TodoCaminoMinimo.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Aeropuerto.cpp" />
+		<Unit filename="src/AlgorithmDijkstra.cpp" />
+		<Unit filename="src/AlgorithmFloyd.cpp" />
 		<Unit filename="src/ArrayList.cpp" />
-		<Unit filename="src/CaminoMinimo.cpp" />
 		<Unit filename="src/Graph.cpp" />
 		<Unit filename="src/LinkedList.cpp" />
 		<Unit filename="src/LinkedListB.cpp" />
 		<Unit filename="src/Node.cpp" />
 		<Unit filename="src/NodeB.cpp" />
 		<Unit filename="src/Server.cpp" />
-		<Unit filename="src/TodoCaminoMinimo.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />

@@ -1,4 +1,4 @@
-Aeropuerto Internacional Toronto Pearson,43.6777176,-79.6270084,https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/YYZ_Aerial_2.jpg/800px-YYZ_Aerial_2.jpg
+﻿Aeropuerto Internacional Toronto Pearson,43.6777176,-79.6270084,https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/YYZ_Aerial_2.jpg/800px-YYZ_Aerial_2.jpg
 Aeropuerto Internacional Jean-Lesage de Quebec,46.7907719,-71.3907577,https://s3.amazonaws.com/gs-waymarking-images/913d9ab9-a6e8-464a-a523-febb90fa5555.jpg
 Aeropuerto Internacional Washington-Dulles,38.9531162,-77.4587275,https://upload.wikimedia.org/wikipedia/commons/9/92/Washington_Dulles_International_Airport_at_Dusk.jpg
 Aeropuerto Internacional Orlando,28.4311577,-81.3102717,https://www.orlandoairports.net/site/uploads/2015/07/airport-at-distance.jpg
@@ -57,3 +57,4 @@ Aeropuerto Internacional Chubu Centrair,34.8590935,136.8124118,https://lh4.googl
 Aeropuerto Internacional de Damasco,33.410556,36.5122553,https://lh5.googleusercontent.com/proxy/3joyKdfsKB-7BBOnPCNiWEpJ59QJPNPbo-8P7l-ebVjyT7mufNayGl6cnLGjvH2V4PhHFq6GMBqclqRgbl3b6zHMnNbRtQ81QwGkfo0j-sOuCkXfxoATt6Bfm1BQvDSymq91vxlkcCyYVP7rYO2otigAD-GcDZQ=w408-h306-k-no
 Aeropuerto Changi de Singapur,1.3644202,103.9893421,https://lh3.googleusercontent.com/proxy/YWSrgrTO7EYfCR1oBHmaCdEh9tZABTAzZdb9sGGY6PAHjHtbHlyOW4N8nQ_Ny7XGPSIP9sVOIa9eCwcrstouQtfVhNj_0IkSNBRJtuiTcEJ6M_JK5-KknYsiqU29Q_0v-pTcMZC6CIQPc_GV79cPhI1VakgvKg=w408-h228-k-no
 Aeropuerto de Gold Coast,-28.1656448,153.5068853,https://lh3.googleusercontent.com/proxy/fGRIRPGX5lPD-8wQPVsLxzyWygMuTCRPqmQL9AdTjwMYK0cQyBzQ1Ej63Ajtfc9hxwPRnwZwlL3EveP40PzwnOY-1CsEhIc_B4YO_LF_jkOrMh6cU3obgO1igrCm61f1NbALGrJaweopGKR9d9HHraZhwFhc4fE=w408-h297-k-no
+Aeropuerto Internacional de Wellington,-41.3275941,174.8054097,https://lh4.googleusercontent.com/proxy/1fs1co7t4_hqg_BZ26ujN08FEWZV6fKs4QUiLfPe_r3HSef0OxPOLVbdmo8rEOUzcnG5JvPCmcnbjYOAehJfCDVLyqYqjUa5cxR4iaZA3AqiiS25ZD7-zwcB8Baf3jtxgiosOcJx8IwagYMbbEcNOcy6zlk=w476-h200-k-no

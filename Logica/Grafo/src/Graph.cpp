@@ -88,10 +88,16 @@ void Graph::printB(LinkedList* grafo)
 {
     myfile.open ("warshall.txt", ios::out | ios::trunc);
     myfile <<"Cerradura transitiva por algoritmo de Warshall\n";
+    myfile <<"Aerpuerto:\t";
     grafo->goToPos(0);
     for(int i = 0; i < grafo->getSize(); i++){
         grafo->goToPos(i);
-        myfile <<grafo->getCurrValue()->getNombre()<<":\t";
+        myfile <<grafo->getCurrValue()->getId()<<"\t";
+    }
+    myfile <<"\n";
+    for(int i = 0; i < grafo->getSize(); i++){
+        grafo->goToPos(i);
+        myfile <<grafo->getCurrValue()->getId()<<"-"<<grafo->getCurrValue()->getNombre()<<":\t";
         if(grafo->getCurr()->getListaAdB()->getSize()){
             for(int j = 0; j < grafo->getCurr()->getListaAdB()->getMax(); j++){
                 grafo->getCurr()->getListaAdB()->goToPos(j);
