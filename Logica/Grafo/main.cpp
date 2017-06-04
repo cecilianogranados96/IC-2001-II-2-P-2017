@@ -1,7 +1,7 @@
 #include <iostream>
 #include <stdlib.h>
-#include "CaminoMinimo.h"
-#include "TodoCaminoMinimo.h"
+#include "AlgorithmDijkstra.h"
+#include "AlgorithmFloyd.h"
 #include "Graph.h"
 #include "Server.h"
 #include <fstream>
@@ -80,7 +80,6 @@ int numberLines()
 
 int main(void)
 {
-    cout<<"\t\t\t Aeropuertos \n"<<endl;
     int lines = 0;
     std::string line;
     ifstream fileA ("aeropuertos.txt");
@@ -123,8 +122,8 @@ int main(void)
        matriz->addEdge(origen, destino, peso);
     }
     fileR.close();
-    TodoCaminoMinimo* floyd = new TodoCaminoMinimo(matriz);
-    CaminoMinimo* dijkstra = new CaminoMinimo(matriz);
+    AlgorithmFloyd* floyd = new AlgorithmFloyd(matriz);
+    AlgorithmDijkstra* dijkstra = new AlgorithmDijkstra(matriz);
     int opcion = 0;
     while(true)
     {
@@ -154,18 +153,18 @@ int main(void)
 
             if(algoritmo == 1){
                 dijkstra->Dijkstra(matriz, origen);
-                dijkstra->recuperaCaminoAux(destino);
-                cout<<"\nDistancia minima "<<dijkstra->OdistanciaMinima()[destino];
+                dijkstra->getPath(destino);
+                cout<<"\nDistancia minima "<<dijkstra->getDistance(destino);
                 WSockServer MyServer5 = WSockServer();
-                MyServer5.RunServer(tostring(dijkstra->OdistanciaMinima()[destino]));
+                MyServer5.RunServer(tostring(dijkstra->getDistance(destino)));
 
             }else
             {
                 floyd->Floyd();
-                floyd->recuperaCamino(origen, destino);
-                cout<<"\nDistancia minima "<<floyd->Odistancia()[origen][destino];
+                floyd->getPath(origen, destino);
+                cout<<"\nDistancia minima "<<floyd->getDistance(origen, destino);
                 WSockServer MyServer3 = WSockServer();
-                MyServer3.RunServer(tostring(floyd->Odistancia()[origen][destino]));
+                MyServer3.RunServer(tostring(floyd->getDistance(origen, destino)));
             }
         }
         if(opcion == 1){
