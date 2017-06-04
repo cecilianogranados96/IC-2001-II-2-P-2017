@@ -88,6 +88,7 @@
 	    }
 	});
 	function calcular() {
+		if ($("#origen").val() != -1 && $("#destino").val() != -1){
 		$.post('Logica/cal_ruta.php',{
 			origen: $("#origen").val(),
 			destino:$("#destino").val(),
@@ -95,6 +96,9 @@
 			},function(data) {
 				window.location.replace("?cal=1&peso="+data);
 		})
+		}else{
+			alert("Revisa los datos parece que algo esta mal ☻");
+		}
 	}
 	function getParameterByName(name) {
 		name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
@@ -107,12 +111,12 @@
 			$("#busqueda").css("display", "block");
 			$(".div1").fadeIn("slow");
 			$(".div2").fadeIn("slow");
-			if (map.dataProvider.lines.length == 1){
+			if (map.dataProvider.lines[0].latitudes.length == 2){
 				$(".con_escala").text("----");
 				$(".b_con_escala").fadeOut("slow");
-				$(".sin_escala").text(" ‎₡ <?php echo $peso;?>");	
+				$(".sin_escala").text(" ‎$ <?php echo $peso;?>");	
 			}else{
-				$(".con_escala").text(" ‎₡ <?php echo $peso;?>");
+				$(".con_escala").text(" ‎$ <?php echo $peso;?>");
 				$(".sin_escala").text("----");
 				$(".b_sin_escala").fadeOut("slow");
 			}
@@ -128,8 +132,8 @@
 				<center>
 					<h2>
 						Sin escalas:<br>
-						<b class="sin_escala" > ‎₡ 5000</b><br>
-						<a href="#" onclick="alert('COMPRADO');" class="btn btn-warning b_sin_escala" >Comprar</a>
+						<b class="sin_escala" > $ 5000</b><br>
+						<a href="#" onclick="alert('Simulación  de compra');" class="btn btn-warning b_sin_escala" >Comprar</a>
 					</h2>
 				</center>
 			</td>
@@ -139,7 +143,7 @@
 		<tr>
 			<td>
 				<select name="origen" class="form-control" id="origen" style="width: 150px;">
-				  <option value="1">Origen</option>
+				  <option value="-1">Origen</option>
 				  <?php include "Logica/orig_des.php"; ?>
 				</select>
 			</td>
@@ -148,7 +152,7 @@
 			</td>
 			<td>
 				<select name="destino" class="form-control" id="destino" style="width: 150px;">
-				  <option value="1">Destino</option>
+				  <option value="-1">Destino</option>
 				  <?php include "Logica/orig_des.php"; ?>
 				</select>
 			</td>
@@ -172,8 +176,8 @@
 				<center>
 					<h2> 
 						Con escalas:<br>
-						<b class="con_escala"> ‎₡ 5000</b><br>
-						<a href="#" onclick="alert('COMPRADO');" class="btn btn-warning b_con_escala">Comprar</a>
+						<b class="con_escala"> ‎$ 5000</b><br>
+						<a href="#" onclick="alert('Simulación de compra');" class="btn btn-warning b_con_escala">Comprar</a>
 					</h2>
 				</center>
 			</td>
