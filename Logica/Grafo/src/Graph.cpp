@@ -101,7 +101,6 @@ void Graph::printB(LinkedList* grafo)
         if(grafo->getCurr()->getListaAdB()->getSize()){
             for(int j = 0; j < grafo->getCurr()->getListaAdB()->getMax(); j++){
                 grafo->getCurr()->getListaAdB()->goToPos(j);
-
                 myfile <<grafo->getCurr()->getListaAdB()->getValue()<<"\t";
             }
         }
@@ -159,7 +158,6 @@ void Graph::warshall()
                 }
             }
         }
-
         for(int i = 0; i < maxSize; i++){
             mWarshall->goToPos(i);
             aux->goToPos(i);
