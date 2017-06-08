@@ -180,7 +180,7 @@ void Graph::kruskal(LinkedList* grafo)
     int mst_wt = 0; // Initialize result
     //sort(edges.begin(), edges.end());
     // Create disjoint sets
-    DisjointSets ds(grafo->getSize());
+
 /*
     vector< pair<int, iPair> >::iterator it;
     for (it=edges.begin(); it!=edges.end(); it++)

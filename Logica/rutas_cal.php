@@ -1,4 +1,17 @@
 <?php
+##########################################################################################
+# 
+# OBJETIVO:
+# =========
+#
+# Sacar las rutas calculadas en el formato javascript.
+#
+# Desarrollo:
+# 
+# - Jose Andres Ceciliano Granados
+#
+#
+#########################################################################################
 $myFile = "Logica/Grafo/aeropuertos.txt";
 $lines = file($myFile);
 $file = fopen("Logica/Grafo/rutas_cal.txt","r");

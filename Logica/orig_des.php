@@ -1,4 +1,21 @@
 <?php
+##########################################################################################
+# 
+# OBJETIVO:
+# =========
+#
+# Crear la lista de origen y destino.
+#
+# Parametros:
+# ===========
+#
+#
+# Desarrollo:
+# 
+# - Jose Andres Ceciliano Granados
+#
+#
+#########################################################################################
 $file = fopen("Logica/Grafo/aeropuertos.txt","r");
 $data ="";
 $x = 0;

@@ -1,4 +1,19 @@
 <?php
+##########################################################################################
+# 
+# OBJETIVO:
+# =========
+#
+# Comunicarse con el socket y enviar parametros.
+#
+#
+#
+# Desarrollo:
+# 
+# - Jose Andres Ceciliano Granados
+#
+#
+#########################################################################################
 	$host    = "localhost";
 	$port    = 1500;
 	if (isset($_POST['origen'])){		
