@@ -20,7 +20,7 @@ class Graph
         void print(LinkedList* grafo);
         void printB(LinkedList* grafo);
         void warshall();
-        void kruskal();
+        void kruskal(LinkedList* grafo);
 
     private:
         LinkedList* grafo;

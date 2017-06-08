@@ -127,7 +127,7 @@ int main(void)
     int opcion = 0;
     while(true)
     {
-        cout<<"\t\t\tAeropuertos\n\nMenu\n\n0. Elegir ruta mas corta\n1. Crear archivos con Warshall(n)\n2. Crear archivos con Kruskal\n\nDigite su eleccion: ";
+        /*cout<<"\t\t\tAeropuertos\n\nMenu\n\n0. Elegir ruta mas corta\n1. Crear archivos con Warshall(n)\n2. Crear archivos con Kruskal\n\nDigite su eleccion: ";
         //cin>>opcion;
         WSockServer MyServer = WSockServer();
         opcion = toint(MyServer.RunServer("Opcion OK"));
@@ -171,8 +171,11 @@ int main(void)
             matriz->warshall();
             matriz->printB(matriz->getWarshall());
         }
+        */
+        opcion = 2;
         if(opcion == 2){
             matriz->warshall();
+            matriz->kruskal(matriz->getWarshall());
         }
     }
     return 0;
