@@ -141,9 +141,9 @@ void LinkedListB::print(){
     {
         NodeB *temp = first->getNext();
         if (size!=0){
-            cout<<"Lista adyacencia\n";
+            cout<<"Lista de aristas\n";
             while(temp!=NULL){
-                cout<<temp->getPeso()<< " \t";
+                cout<<"Origen: "<<temp->getOrigen()<<", Destino: "<<temp->getDestino()<<", Peso: "<<temp->getPeso()<<", Estado: "<<temp->getState()<< "\n";
                 temp = temp->getNext();
             }
             cout<<"\n \n";
@@ -176,6 +176,33 @@ void LinkedListB::printValue(){
     {
      cout << "Error: " << e.what()<<"\n\n";
     }
+}
+
+//Función bubble sort
+void LinkedListB::bubbleSort(){
+  int x, y;
+  int oX, dX, oY, dY;
+  for(int i = 1; i<=size; ++i) {
+    for(int j = 0; j<=size-i; ++j) {
+        goToPos(j);
+        x = curr->getPeso();
+        oX = curr->getOrigen();
+        dX = curr->getDestino();
+
+        goToPos(j+1);
+        y = curr->getPeso();
+        oY = curr->getOrigen();
+        dY = curr->getDestino();
+
+        if(x>y){
+            goToPos(j);
+            curr->setCurr(oY, dY, y);
+
+            goToPos(j+1);
+            curr->setCurr(oX, dX, x);
+        }
+    }
+  }
 }
 
 //Destructor de la clase

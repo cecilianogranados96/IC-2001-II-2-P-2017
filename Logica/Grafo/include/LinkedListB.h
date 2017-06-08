@@ -20,10 +20,12 @@ class LinkedListB
         void previous();
         void insert(int origen, int destino, int peso);
         void append(int origen, int destino, int peso);
+        void bubbleSort();
         void print();
         void clear();
         int remove();
         void printValue();
+
     protected:
         NodeB* first;
         NodeB* last;

@@ -14,6 +14,7 @@ NodeB::NodeB(int origen, int destino, int peso, NodeB* next){
     this->destino = destino;
     this->peso = peso;
     this->next = next;
+    state = false;
 }
 
 //Función getValue: devuelve el valor del nodo
@@ -36,6 +37,10 @@ NodeB* NodeB::getNext(){
     return next;
 }
 
+//Función getState: devuelve el nodo siguiente
+bool NodeB::getState(){
+    return state;
+}
 //Método setValue: le asigna el parámetro como valor del nodo
 void NodeB::setOrigen(int origen){
     this->origen = origen;
@@ -54,6 +59,18 @@ void NodeB::setPeso(int peso){
 //Método setNext: le asigna el parámetro como siguiente del nodo
 void NodeB::setNext(NodeB* next){
     this->next = next;
+}
+
+//Método setState
+void NodeB::setState(bool state){
+    this->state = state;
+}
+
+//Método setCurr
+void NodeB::setCurr(int origen, int destino, int peso){
+    this->origen = origen;
+    this->destino = destino;
+    this->peso = peso;
 }
 
 //Método clear: elimina el nodo

@@ -76,6 +76,7 @@ int numberLines()
     ifstream fileA ("aeropuertos.txt");
     while(getline(fileA, line))
         ++lines;
+    fileA.close();
 }
 
 int main(void)
@@ -95,7 +96,6 @@ int main(void)
     while (getline(file, textline))
     {
         string comma_string;
-        //cout<<textline;
         std::istringstream text_stream(textline);
         text_stream >> nombre;
         getline(text_stream, comma_string, ',');
@@ -125,8 +125,8 @@ int main(void)
     AlgorithmFloyd* floyd = new AlgorithmFloyd(matriz);
     AlgorithmDijkstra* dijkstra = new AlgorithmDijkstra(matriz);
     int opcion = 0;
-    while(true)
-    {
+    //while(true)
+    //{
         /*cout<<"\t\t\tAeropuertos\n\nMenu\n\n0. Elegir ruta mas corta\n1. Crear archivos con Warshall(n)\n2. Crear archivos con Kruskal\n\nDigite su eleccion: ";
         //cin>>opcion;
         WSockServer MyServer = WSockServer();
@@ -174,9 +174,8 @@ int main(void)
         */
         opcion = 2;
         if(opcion == 2){
-            matriz->warshall();
-            matriz->kruskal(matriz->getWarshall());
+            matriz->kruskal();
         }
-    }
+    //}
     return 0;
 }

@@ -24,6 +24,7 @@ class LinkedList
         string remove();
         int find(string value);
         void printValue();
+
     protected:
         Node* first;
         Node* last;

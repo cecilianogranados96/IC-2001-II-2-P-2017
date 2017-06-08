@@ -1,4 +1,5 @@
 #include "Graph.h"
+#include "LinkedListB.h"
 #include "DisjointSets.h"
 
 //Clase constructora
@@ -109,6 +110,7 @@ void Graph::printB(LinkedList* grafo)
     }
     myfile.close();
 }
+
 //Implementa el algoritmo de Warshall
 void Graph::warshall()
 {
@@ -175,9 +177,102 @@ void Graph::warshall()
 }
 
 //Algoritmo de Kruskal
-void Graph::kruskal(LinkedList* grafo)
+void Graph::kruskal()
 {
-    int mst_wt = 0; // Initialize result
+    LinkedListB* aristasOrdenas = new LinkedListB();
+
+    int lines = 0;
+    std::string line;
+    ifstream fileA ("aeropuertos.txt");
+    while(getline(fileA, line))
+        ++lines;
+    fileA.close();
+
+    //Lee del archivo las aristas para añadirlas a la lista
+    int origen, destino, peso;
+    std::string textlineR;
+    ifstream fileR ("rutas.txt");
+    while (getline(fileR, textlineR))
+    {
+       string comma_string;
+       std::istringstream text_stream(textlineR);
+       text_stream >> origen;
+       getline(text_stream, comma_string, ',');
+       text_stream >> destino;
+       getline(text_stream, comma_string, ',');
+       text_stream >> peso;
+       aristasOrdenas->append(origen, destino, peso);
+    }
+    fileR.close();
+
+    aristasOrdenas->print();
+    aristasOrdenas->bubbleSort();
+    cout<<"\n\nOrdenada\n\n";
+    aristasOrdenas->print();
+
+    int filas = 1;
+    int columnas[aristasOrdenas->getSize()];
+    bool flag = true;
+    int posOx, posOy, posDx, posDy;
+    int conjuntos[lines][aristasOrdenas->getSize()];
+
+    for(int i = 0; i < lines; i++){
+        conjuntos[0][i] = i;
+    }
+
+    for(int i = 0; i < aristasOrdenas->getSize(); i++){
+        columnas[i] = 1;
+    }
+
+
+    for(int i = 0; i < aristasOrdenas->getSize(); i++){
+        aristasOrdenas->goToPos(i);
+
+        for(int j = 0; j < lines; j++){
+            for(int k = 0; k < columnas[j]; k++){
+                if(conjuntos[k][j] == aristasOrdenas->getCurr()->getOrigen()){
+                    cout<<"Encontrado el origen: "<<aristasOrdenas->getCurr()->getOrigen();
+                    cout<<" en la posicion: "<<k<<", "<<j<<"\n";
+                    posOx = k;
+                    posOy = j;
+                }
+
+                if(conjuntos[k][j] == aristasOrdenas->getCurr()->getDestino()){
+                    cout<<"Encontrado el destino: "<<aristasOrdenas->getCurr()->getDestino();
+                    cout<<" en la posicion: "<<k<<", "<<j<<"\n";
+                    posDx = k;
+                    posDy = j;
+                }
+            }
+        }
+
+        cout<<"\nmatriz\n";
+        for(int j = 0; j < lines; j++){
+            for(int k = 0; k < columnas[j]; k++){
+                cout<<conjuntos[k][j]<<"\t";
+            }
+            cout<<"\n";
+        }
+
+        if(posOy != posDy){
+            cout<<"\n\nSon diferentes los y\n\n";
+            for(int k = 0; k < columnas[posDy] ; k++){
+                conjuntos[posOx][columnas[posOy]] = conjuntos[k][posDy];
+
+                conjuntos[k][posDy] = -1;
+                columnas[posDy]=1;
+                columnas[posOy]++;
+                cout<<"\nEntro a la ciclo\n\n";
+            }
+            aristasOrdenas->getCurr()->setState(true);
+        }
+
+
+    }
+
+    cout<<"\n\nDespues de kruskal\n\n";
+    aristasOrdenas->print();
+    /*int mst_wt = 0; // Initialize result
     //sort(edges.begin(), edges.end());
     // Create disjoint sets
     DisjointSets ds(grafo->getSize());

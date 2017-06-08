@@ -1,7 +1,15 @@
 #ifndef GRAPH_H
 #define GRAPH_H
 #include "LinkedList.h"
+#include <iostream>
+#include <stdlib.h>
 #include <fstream>
+#include <string>
+#include <cstring>
+#include <sstream>
+#include <cstdlib>
+#include <stdio.h>
+#include <string.h>
 
 class Graph
 {
@@ -20,7 +28,7 @@ class Graph
         void print(LinkedList* grafo);
         void printB(LinkedList* grafo);
         void warshall();
-        void kruskal(LinkedList* grafo);
+        void kruskal();
 
     private:
         LinkedList* grafo;
