@@ -4,7 +4,20 @@
 #include <cstddef>
 
 using namespace std;
-
+//################################
+//#
+//# OBJETIVO:
+//# =========
+//#
+//# Construcción de la Linked list.
+//#
+//#
+//# Desarrollo:
+//#
+//# - Silvia Calderón
+//#
+//#
+//################################
 //Constructor de la clase
 LinkedList::LinkedList(int maxSize){
     first = new Node(NULL);

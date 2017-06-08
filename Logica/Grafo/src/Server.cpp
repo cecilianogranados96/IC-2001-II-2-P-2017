@@ -1,6 +1,20 @@
 #include "Server.h"
 #include <iostream>
 using namespace std;
+//################################
+//#
+//# OBJETIVO:
+//# =========
+//#
+//# Contrucción del socket.
+//#
+//#
+//# Desarrollo:
+//#
+//# - Jose Andres Ceciliano
+//#
+//#
+//################################
 WSockServer::WSockServer()
 {
 	hSocket = INVALID_SOCKET;

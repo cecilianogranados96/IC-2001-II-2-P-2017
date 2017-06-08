@@ -1,4 +1,21 @@
 <?php
+##########################################################################################
+# 
+# OBJETIVO:
+# =========
+#
+# Colocar las rutas en el formato javascript.
+#
+# Parametros:
+# ===========
+#
+#
+# Desarrollo:
+# 
+# - Jose Andres Ceciliano Granados
+#
+#
+#########################################################################################
 $myFile = "Logica/Grafo/aeropuertos.txt";
 $lines = file($myFile);
 $file = fopen("Logica/Grafo/rutas.txt","r");

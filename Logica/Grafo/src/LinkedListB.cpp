@@ -2,7 +2,20 @@
 #include "LinkedListB.h"
 #include <stdexcept>
 #include <cstddef>
-
+//################################
+//#
+//# OBJETIVO:
+//# =========
+//#
+//# Construcción de la Linked list modificada para manejas aristas.
+//#
+//#
+//# Desarrollo:
+//#
+//# - Silvia Calderón
+//#
+//#
+//################################
 using namespace std;
 
 //Constructor de la clase

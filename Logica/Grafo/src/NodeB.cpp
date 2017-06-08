@@ -1,6 +1,20 @@
 #include "NodeB.h"
 #include <stdexcept>
 #include <cstddef>
+//################################
+//#
+//# OBJETIVO:
+//# =========
+//#
+//# Contrucción de los nodos del grafo.
+//#
+//#
+//# Desarrollo:
+//#
+//# - Silvia Calderón
+//#
+//#
+//################################
 using namespace std;
 
 //Constructor de un nodo vacío con referencia al siguiente

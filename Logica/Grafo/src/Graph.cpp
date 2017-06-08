@@ -1,6 +1,20 @@
 #include "Graph.h"
 #include "LinkedListB.h"
 #include "DisjointSets.h"
+//################################
+//#
+//# OBJETIVO:
+//# =========
+//#
+//# Contrucción del grafo.
+//#
+//#
+//# Desarrollo:
+//#
+//# - Silvia Calderón
+//#
+//#
+//################################
 
 //Clase constructora
 Graph::Graph(int maxSize)
@@ -180,14 +194,12 @@ void Graph::warshall()
 void Graph::kruskal()
 {
     LinkedListB* aristasOrdenas = new LinkedListB();
-
     int lines = 0;
     std::string line;
     ifstream fileA ("aeropuertos.txt");
     while(getline(fileA, line))
-        ++lines;
+        lines++;
     fileA.close();
-
     //Lee del archivo las aristas para añadirlas a la lista
     int origen, destino, peso;
     std::string textlineR;
@@ -216,18 +228,17 @@ void Graph::kruskal()
     int posOx, posOy, posDx, posDy;
     int conjuntos[lines][aristasOrdenas->getSize()];
 
+
     for(int i = 0; i < lines; i++){
+        columnas[i] = 1;
+    }
+
+    for(int i = 0; i < aristasOrdenas->getSize(); i++){
         conjuntos[0][i] = i;
     }
 
     for(int i = 0; i < aristasOrdenas->getSize(); i++){
-        columnas[i] = 1;
-    }
-
-
-    for(int i = 0; i < aristasOrdenas->getSize(); i++){
         aristasOrdenas->goToPos(i);
-
         for(int j = 0; j < lines; j++){
             for(int k = 0; k < columnas[j]; k++){
                 if(conjuntos[k][j] == aristasOrdenas->getCurr()->getOrigen()){
@@ -236,7 +247,6 @@ void Graph::kruskal()
                     posOx = k;
                     posOy = j;
                 }
-
                 if(conjuntos[k][j] == aristasOrdenas->getCurr()->getDestino()){
                     cout<<"Encontrado el destino: "<<aristasOrdenas->getCurr()->getDestino();
                     cout<<" en la posicion: "<<k<<", "<<j<<"\n";
@@ -256,46 +266,19 @@ void Graph::kruskal()
 
         if(posOy != posDy){
             cout<<"\n\nSon diferentes los y\n\n";
-            for(int k = 0; k < columnas[posDy] ; k++){
+            for(int k = 0; k < columnas[posDy]; k++){
                 conjuntos[posOx][columnas[posOy]] = conjuntos[k][posDy];
-
                 conjuntos[k][posDy] = -1;
-                columnas[posDy]=1;
+                columnas[posDy] = 1;
                 columnas[posOy]++;
                 cout<<"\nEntro a la ciclo\n\n";
             }
             aristasOrdenas->getCurr()->setState(true);
         }
-
-
     }
 
     cout<<"\n\nDespues de kruskal\n\n";
     aristasOrdenas->print();
-    /*int mst_wt = 0; // Initialize result
-    //sort(edges.begin(), edges.end());
-    // Create disjoint sets
-
-/*
-    vector< pair<int, iPair> >::iterator it;
-    for (it=edges.begin(); it!=edges.end(); it++)
-    {
-        int u = it->second.first;
-        int v = it->second.second;
-        int set_u = ds.find(u);
-        int set_v = ds.find(v);
-        if (set_u != set_v)
-        {
-            cout << u << " - " << v << endl;
-            // Update MST weight
-            mst_wt += it->first;
-            // Merge two sets
-            ds.merge(set_u, set_v);
-        }
-    }
-
-    return mst_wt;
-    */
 }
 
 //Clase destructora

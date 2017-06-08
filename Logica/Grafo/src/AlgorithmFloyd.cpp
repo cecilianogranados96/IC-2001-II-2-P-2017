@@ -1,7 +1,20 @@
 #include "AlgorithmFloyd.h"
 
 typedef int * matrix;
-
+//################################
+//#
+//# OBJETIVO:
+//# =========
+//#
+//# Implementación del alogoritmo de Floyd al grafo contrustruido anterioemente.
+//#
+//#
+//# Desarrollo:
+//#
+//# - Silvia Calderón
+//#
+//#
+//################################
 //
 AlgorithmFloyd::AlgorithmFloyd(Graph* g)
 {

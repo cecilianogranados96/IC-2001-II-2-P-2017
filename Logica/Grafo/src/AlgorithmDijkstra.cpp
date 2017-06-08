@@ -1,5 +1,18 @@
 #include "AlgorithmDijkstra.h"
-
+//################################
+//#
+//# OBJETIVO:
+//# =========
+//#
+//# Implementación del alogoritmo de Dijkstra al grafo contrustruido anterioemente.
+//#
+//#
+//# Desarrollo:
+//#
+//# - Silvia Calderón
+//#
+//#
+//################################
 //Constructor de la clase
 AlgorithmDijkstra::AlgorithmDijkstra(Graph* g)
 {

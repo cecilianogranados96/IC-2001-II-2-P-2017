@@ -12,7 +12,20 @@
 #include <cstdlib>
 #include <stdio.h>
 #include <string.h>
-
+//################################
+//#
+//# OBJETIVO:
+//# =========
+//#
+//# Implementación del main con las comunicaciones al socket.
+//#
+//#
+//# Desarrollo:
+//#
+//# - Silvia Calderón Navarro.
+//# - Jose Andres Ceciliano G.
+//#
+//################################
 using namespace std;
 
 int toint(string val){
@@ -125,10 +138,7 @@ int main(void)
     AlgorithmFloyd* floyd = new AlgorithmFloyd(matriz);
     AlgorithmDijkstra* dijkstra = new AlgorithmDijkstra(matriz);
     int opcion = 0;
-<<<<<<< HEAD
-    //while(true)
-    //{
-        /*cout<<"\t\t\tAeropuertos\n\nMenu\n\n0. Elegir ruta mas corta\n1. Crear archivos con Warshall(n)\n2. Crear archivos con Kruskal\n\nDigite su eleccion: ";
+    /*cout<<"\t\t\tAeropuertos\n\nMenu\n\n0. Elegir ruta mas corta\n1. Crear archivos con Warshall(n)\n2. Crear archivos con Kruskal\n\nDigite su eleccion: ";
 =======
     while(true)
     {
@@ -177,6 +187,8 @@ int main(void)
             matriz->warshall();
             matriz->printB(matriz->getWarshall());
         }
+        */
+        opcion = 2;
         if(opcion == 2){
             matriz->kruskal();
         }

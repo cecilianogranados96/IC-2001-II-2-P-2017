@@ -4,7 +4,20 @@
 #define DEFAULT_MAX_SIZE 100000
 
 using namespace std;
-
+//################################
+//#
+//# OBJETIVO:
+//# =========
+//#
+//# Construcción de un array list.
+//#
+//#
+//# Desarrollo:
+//#
+//# - Silvia Calderón
+//#
+//#
+//################################
 //Constructor vacío
 ArrayList::ArrayList(){}
 

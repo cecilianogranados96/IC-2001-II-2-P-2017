@@ -1,5 +1,20 @@
 #include "Aeropuerto.h"
 
+//################################
+//#
+//# OBJETIVO:
+//# =========
+//#
+//# Contrucción de aeropuertos.
+//#
+//#
+//# Desarrollo:
+//#
+//# - Silvia Calderón
+//#
+//#
+//################################
+
 Aeropuerto::Aeropuerto(string nombre, float posX, float posY, string imagen)
 {
     this->nombre = nombre;

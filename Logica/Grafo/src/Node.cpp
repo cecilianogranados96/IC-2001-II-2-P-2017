@@ -2,7 +2,20 @@
 #include <stdexcept>
 #include <cstddef>
 using namespace std;
-
+//################################
+//#
+//# OBJETIVO:
+//# =========
+//#
+//# Contrucción de los nodos para las Linked List.
+//#
+//#
+//# Desarrollo:
+//#
+//# - Silvia Calderón
+//#
+//#
+//################################
 //Constructor de un nodo vacío con referencia al siguiente
 Node::Node(Node* next){
     this->next=next;

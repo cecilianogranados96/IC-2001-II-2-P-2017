@@ -201,19 +201,19 @@
 	"Graph.h"
 	<iostream>
 
-1495513420 source:c:\xampp\htdocs\ic-2001-ii-2-p-2017\logica\grafo\src\aeropuerto.cpp
+1495750842 source:c:\xampp\htdocs\ic-2001-ii-2-p-2017\logica\grafo\src\aeropuerto.cpp
 	"Aeropuerto.h"
 
-1495513390 c:\xampp\htdocs\ic-2001-ii-2-p-2017\logica\grafo\include\aeropuerto.h
+1495750842 c:\xampp\htdocs\ic-2001-ii-2-p-2017\logica\grafo\include\aeropuerto.h
 	<stdexcept>
 	<cstddef>
 
-1496538060 source:c:\xampp\htdocs\ic-2001-ii-2-p-2017\logica\grafo\src\arraylist.cpp
+1496336276 source:c:\xampp\htdocs\ic-2001-ii-2-p-2017\logica\grafo\src\arraylist.cpp
 	"ArrayList.h"
 	<iostream>
 	<stdexcept>
 
-1495416333 c:\xampp\htdocs\ic-2001-ii-2-p-2017\logica\grafo\include\arraylist.h
+1495750842 c:\xampp\htdocs\ic-2001-ii-2-p-2017\logica\grafo\include\arraylist.h
 
 1496538060 source:c:\xampp\htdocs\ic-2001-ii-2-p-2017\logica\grafo\src\caminominimo.cpp
 	"CaminoMinimo.h"
@@ -223,7 +223,7 @@
 	"Graph.h"
 	<iostream>
 
-1496886892 c:\xampp\htdocs\ic-2001-ii-2-p-2017\logica\grafo\include\graph.h
+1496896317 c:\xampp\htdocs\ic-2001-ii-2-p-2017\logica\grafo\include\graph.h
 	"LinkedList.h"
 	<iostream>
 	<stdlib.h>
@@ -235,44 +235,44 @@
 	<stdio.h>
 	<string.h>
 
-1496887057 c:\xampp\htdocs\ic-2001-ii-2-p-2017\logica\grafo\include\linkedlist.h
+1496896317 c:\xampp\htdocs\ic-2001-ii-2-p-2017\logica\grafo\include\linkedlist.h
 	"Node.h"
 
-1495683333 c:\xampp\htdocs\ic-2001-ii-2-p-2017\logica\grafo\include\node.h
+1495750842 c:\xampp\htdocs\ic-2001-ii-2-p-2017\logica\grafo\include\node.h
 	<iostream>
 	"Aeropuerto.h"
 	"ArrayList.h"
 
-1496895450 source:c:\xampp\htdocs\ic-2001-ii-2-p-2017\logica\grafo\src\graph.cpp
+1496898101 source:c:\xampp\htdocs\ic-2001-ii-2-p-2017\logica\grafo\src\graph.cpp
 	"Graph.h"
 	"LinkedListB.h"
 	"DisjointSets.h"
 
-1494995658 source:c:\xampp\htdocs\ic-2001-ii-2-p-2017\logica\grafo\src\linkedlist.cpp
+1495750842 source:c:\xampp\htdocs\ic-2001-ii-2-p-2017\logica\grafo\src\linkedlist.cpp
 	<iostream>
 	"LinkedList.h"
 	<stdexcept>
 	<cstddef>
 
-1496892961 source:c:\xampp\htdocs\ic-2001-ii-2-p-2017\logica\grafo\src\linkedlistb.cpp
+1496896317 source:c:\xampp\htdocs\ic-2001-ii-2-p-2017\logica\grafo\src\linkedlistb.cpp
 	<iostream>
 	"LinkedListB.h"
 	<stdexcept>
 	<cstddef>
 
-1496887222 c:\xampp\htdocs\ic-2001-ii-2-p-2017\logica\grafo\include\linkedlistb.h
+1496896317 c:\xampp\htdocs\ic-2001-ii-2-p-2017\logica\grafo\include\linkedlistb.h
 	"NodeB.h"
 
-1496892806 c:\xampp\htdocs\ic-2001-ii-2-p-2017\logica\grafo\include\nodeb.h
+1496896317 c:\xampp\htdocs\ic-2001-ii-2-p-2017\logica\grafo\include\nodeb.h
 	<iostream>
 	"Aeropuerto.h"
 
-1495685105 source:c:\xampp\htdocs\ic-2001-ii-2-p-2017\logica\grafo\src\node.cpp
+1495750842 source:c:\xampp\htdocs\ic-2001-ii-2-p-2017\logica\grafo\src\node.cpp
 	"Node.h"
 	<stdexcept>
 	<cstddef>
 
-1496892970 source:c:\xampp\htdocs\ic-2001-ii-2-p-2017\logica\grafo\src\nodeb.cpp
+1496896317 source:c:\xampp\htdocs\ic-2001-ii-2-p-2017\logica\grafo\src\nodeb.cpp
 	"NodeB.h"
 	<stdexcept>
 	<cstddef>
@@ -287,11 +287,7 @@
 
 1495762074 D
 
-<<<<<<< HEAD
-1496889226 source:c:\xampp\htdocs\ic-2001-ii-2-p-2017\logica\grafo\main.cpp
-=======
-1496885928 source:c:\xampp\htdocs\ic-2001-ii-2-p-2017\logica\grafo\main.cpp
->>>>>>> origin/master
+1496896503 source:c:\xampp\htdocs\ic-2001-ii-2-p-2017\logica\grafo\main.cpp
 	<iostream>
 	<stdlib.h>
 	"AlgorithmDijkstra.h"
@@ -309,6 +305,19 @@
 1495762074 gin/master
 	<iostream>
 	<stdlib.h>
+	"AlgorithmDijkstra.h"
+	"AlgorithmFloyd.h"
+	"Graph.h"
+	"Server.h"
+	<fstream>
+	<string>
+	<cstring>
+	<sstream>
+	<cstdlib>
+	<stdio.h>
+	<string.h>
+	<iostream>
+	<stdlib.h>
 	"CaminoMinimo.h"
 	"TodoCaminoMinimo.h"
 	"Graph.h"
@@ -324,27 +333,27 @@
 	"Server.h"
 	<iostream>
 
-1496097750 c:\xampp\htdocs\ic-2001-ii-2-p-2017\logica\grafo\include\server.h
+1495900410 c:\xampp\htdocs\ic-2001-ii-2-p-2017\logica\grafo\include\server.h
 	<windows.h>
 	<winsock2.h>
 	<iostream>
 
-1496097750 source:c:\xampp\htdocs\ic-2001-ii-2-p-2017\logica\grafo\src\server.cpp
+1495899953 source:c:\xampp\htdocs\ic-2001-ii-2-p-2017\logica\grafo\src\server.cpp
 	"Server.h"
 	<iostream>
 
-1496553238 source:c:\xampp\htdocs\ic-2001-ii-2-p-2017\logica\grafo\src\algorithmdijkstra.cpp
+1496588496 source:c:\xampp\htdocs\ic-2001-ii-2-p-2017\logica\grafo\src\algorithmdijkstra.cpp
 	"AlgorithmDijkstra.h"
 
-1496553238 c:\xampp\htdocs\ic-2001-ii-2-p-2017\logica\grafo\include\algorithmdijkstra.h
+1496588496 c:\xampp\htdocs\ic-2001-ii-2-p-2017\logica\grafo\include\algorithmdijkstra.h
 	<fstream>
 	"Graph.h"
 	<iostream>
 
-1496553238 source:c:\xampp\htdocs\ic-2001-ii-2-p-2017\logica\grafo\src\algorithmfloyd.cpp
+1496588496 source:c:\xampp\htdocs\ic-2001-ii-2-p-2017\logica\grafo\src\algorithmfloyd.cpp
 	"AlgorithmFloyd.h"
 
-1496553238 c:\xampp\htdocs\ic-2001-ii-2-p-2017\logica\grafo\include\algorithmfloyd.h
+1496588496 c:\xampp\htdocs\ic-2001-ii-2-p-2017\logica\grafo\include\algorithmfloyd.h
 	<fstream>
 	"Graph.h"
 	<iostream>
@@ -352,7 +361,7 @@
 1496884378 source:c:\xampp\htdocs\ic-2001-ii-2-p-2017\logica\grafo\src\disjointsets.cpp
 	"DisjointSets.h"
 
-1496884709 c:\xampp\htdocs\ic-2001-ii-2-p-2017\logica\grafo\include\disjointsets.h
+1496884416 c:\xampp\htdocs\ic-2001-ii-2-p-2017\logica\grafo\include\disjointsets.h
 
 1496884565 source:c:\xampp\htdocs\ic-2001-ii-2-p-2017\logica\grafo\src\graf.cpp
 	"Graf.h"

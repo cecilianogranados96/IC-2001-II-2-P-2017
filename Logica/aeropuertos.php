@@ -1,4 +1,19 @@
 <?php
+##########################################################################################
+# 
+# OBJETIVO:
+# =========
+#
+# Crear los aeropuertos en formato de javascript.
+#
+#
+#
+# Desarrollo:
+# 
+# - Jose Andres Ceciliano Granados
+#
+#
+#########################################################################################
 $file = fopen("Logica/Grafo/aeropuertos.txt","r");
 $data = "";
 $x = 1;
