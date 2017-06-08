@@ -1,12 +1,27 @@
-	<?php
-	if (isset($_GET['cal'])){
-		$cargar = "Logica/rutas_cal.php"; 
-		$peso = $_GET['peso'];
-	}else{
-		$cargar = "Logica/rutas.php";
-		$peso = "";
-	}
-	?>
+<?php
+##########################################################################################
+# 
+# OBJETIVO:
+# =========
+#
+# Visualizar aeropuertos, calcular rutas y mostrar costos.
+#
+#
+#
+# Desarrollo:
+# 
+# - Jose Andres Ceciliano Granados
+#
+#
+#########################################################################################
+if (isset($_GET['cal'])){
+	$cargar = "Logica/rutas_cal.php"; 
+	$peso = $_GET['peso'];
+}else{
+	$cargar = "Logica/rutas.php";
+	$peso = "";
+}
+?>
 <html>
 	<head>
 	<title>Aviator - Calcula tus rutas mas facil y rapido</title>
@@ -33,6 +48,7 @@
 			}
 		}
 	);
+	//Construccion del mapa
 	var map = AmCharts.makeChart("chartdiv", {
 	    "type": "map",
 	    "theme": "dark",
@@ -87,6 +103,7 @@
 	        }]
 	    }
 	});
+	//Calcula las rutas
 	function calcular() {
 		if ($("#origen").val() != -1 && $("#destino").val() != -1){
 			$.post('Logica/cal_ruta.php',{
@@ -106,6 +123,7 @@
 		results = regex.exec(location.search);
 		return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
 	}
+	//Muestra costos de las rutas una vez calculadas
 	function mostrar_costo() {
 		if (getParameterByName('cal') == 1){
 			$("#busqueda").css("display", "block");
