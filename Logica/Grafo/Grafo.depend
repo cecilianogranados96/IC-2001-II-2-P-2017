@@ -287,7 +287,11 @@
 
 1495762074 D
 
+<<<<<<< HEAD
 1496889226 source:c:\xampp\htdocs\ic-2001-ii-2-p-2017\logica\grafo\main.cpp
+=======
+1496885928 source:c:\xampp\htdocs\ic-2001-ii-2-p-2017\logica\grafo\main.cpp
+>>>>>>> origin/master
 	<iostream>
 	<stdlib.h>
 	"AlgorithmDijkstra.h"
